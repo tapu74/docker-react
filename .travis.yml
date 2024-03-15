@@ -6,4 +6,4 @@ before_install:
   - docker build -t tapu74/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run tapu74/docker-react npm run test -- --coverage
+  - docker run -e CI=true tapu74/docker-react npm run test
